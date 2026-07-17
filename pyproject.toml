@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "data-visualisation-reference"
-version = "0.1.0"
+version = "1.0.0"
 description = "Practical, reusable data visualisation patterns for analytical and production workflows."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -19,9 +19,17 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+dashboard = ["streamlit>=1.36"]
+large-data = ["datashader>=0.16", "pillow>=10.0"]
+all = [
+  "datashader>=0.16",
+  "pillow>=10.0",
+  "streamlit>=1.36",
+]
 dev = [
   "pytest>=8.0",
   "pytest-cov>=5.0",
+  "pytest-mpl>=0.17",
   "ruff>=0.5",
 ]
 
@@ -31,6 +39,14 @@ packages = ["src/dataviz_reference"]
 [tool.pytest.ini_options]
 addopts = "-q --disable-warnings --maxfail=1"
 testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["dataviz_reference"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
 
 [tool.ruff]
 line-length = 100
