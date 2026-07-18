@@ -18,7 +18,7 @@ This repository complements public articles and presentation material by **Saura
 
 ### SlideShare presentation
 
-- **Data visualization — Road Accidents in United Kingdom** — an applied data-visualisation study using UK road-accident data to identify trends and relationships across accident, road, vehicle, driver, time, and severity attributes. The presentation demonstrates how exploratory analysis and statistical graphics can convert a complex real-world dataset into interpretable findings.
+- [**Data visualization — Road Accidents in United Kingdom**](https://share.google/stvTDaRe4NFjtxVFs) — an applied data-visualisation study using UK road-accident data to identify trends and relationships across accident, road, vehicle, driver, time, and severity attributes. The presentation demonstrates how exploratory analysis and statistical graphics can convert a complex real-world dataset into interpretable findings.
 
 The code in this repository turns these principles into reproducible Python examples, reusable APIs, automated tests, interactive dashboards, and scalable visualisation workflows. See [ARTICLES.md](ARTICLES.md) for the detailed article-to-code map.
 
