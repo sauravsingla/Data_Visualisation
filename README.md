@@ -1,5 +1,10 @@
 # Data Visualisation Reference
 
+[![CI](https://github.com/sauravsingla/Data_Visualisation/actions/workflows/ci.yml/badge.svg)](https://github.com/sauravsingla/Data_Visualisation/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CITATION.cff](https://img.shields.io/badge/citation-CFF-blue.svg)](CITATION.cff)
+
 A production-minded reference repository for clear, accessible, scalable, and reusable data visualisation in Python. It combines traditional statistical graphics with interactive dashboards, geospatial analysis, million-point rendering, benchmarking, testing, and CI.
 
 ## Published articles
@@ -29,6 +34,7 @@ The code in this repository turns those principles into reproducible Python exam
 .
 ├── Data_Visualisation_Charts.ipynb   # Original traditional-chart notebook
 ├── ARTICLES.md                       # Published articles and code mapping
+├── CITATION.cff                      # Machine-readable citation metadata
 ├── apps/streamlit_app.py             # Interactive analytical dashboard
 ├── benchmarks/benchmark_rendering.py # Matplotlib and Plotly benchmark
 ├── examples/gallery.py               # Static reproducible gallery
@@ -151,6 +157,10 @@ Coverage is configured with branch measurement and an 85% minimum. GitHub Action
 ## Open-source data policy
 
 Examples use deterministic synthetic data by default, avoiding unstable downloads and licensing surprises. The APIs accept ordinary pandas DataFrames, so users can directly apply them to open datasets from World Bank Open Data, Our World in Data, data.gov.in, Kaggle, UCI Machine Learning Repository, or their own governed data sources. Always retain the original dataset licence and citation.
+
+## Citation
+
+Use GitHub's **Cite this repository** control, powered by [`CITATION.cff`](CITATION.cff), to generate a software citation. For conceptual discussion, also cite the relevant Medium article listed above. Include the repository release or commit hash in reproducible research.
 
 ## Contributing
 
