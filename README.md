@@ -7,14 +7,20 @@
 
 A production-minded reference repository for clear, accessible, scalable, and reusable data visualisation in Python. It combines traditional statistical graphics with interactive dashboards, geospatial analysis, million-point rendering, benchmarking, testing, and CI.
 
-## Published articles
+## Publications and presentations
 
-This repository complements two articles by **Saurav Singla**, originally published in the *Towards Data Science* archive on Medium:
+This repository complements public articles and presentation material by **Saurav Singla**.
+
+### Published articles
 
 1. [What are the important principles of data visualization?](https://medium.com/data-science/what-are-the-important-principles-of-data-visualization-3d3ca6c8c303) — visual encoding, refinement, clarity, and narrative visualisation.
 2. [Exploratory Data Analysis is a significant part of Data Science](https://medium.com/data-science/exploratory-data-analysis-is-a-significant-part-of-data-science-7f3b173c04d2) — practical EDA, understanding distributions, relationships, patterns, and data quality before modelling.
 
-The code in this repository turns those principles into reproducible Python examples, reusable APIs, automated tests, interactive dashboards, and scalable visualisation workflows. See [ARTICLES.md](ARTICLES.md) for the detailed article-to-code map.
+### SlideShare presentation
+
+- **Data visualization — Road Accidents in United Kingdom** — an applied data-visualisation study using UK road-accident data to identify trends and relationships across accident, road, vehicle, driver, time, and severity attributes. The presentation demonstrates how exploratory analysis and statistical graphics can convert a complex real-world dataset into interpretable findings.
+
+The code in this repository turns these principles into reproducible Python examples, reusable APIs, automated tests, interactive dashboards, and scalable visualisation workflows. See [ARTICLES.md](ARTICLES.md) for the detailed article-to-code map.
 
 ## What this repository solves
 
