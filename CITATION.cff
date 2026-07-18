@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite the software and the relevant accompanying article."
+title: "Data Visualisation Reference"
+type: software
+authors:
+  - family-names: Singla
+    given-names: Saurav
+repository-code: "https://github.com/sauravsingla/Data_Visualisation"
+url: "https://github.com/sauravsingla/Data_Visualisation"
+version: 1.0.0
+date-released: 2026-07-19
+license: MIT
+keywords:
+  - data visualisation
+  - data visualization
+  - exploratory data analysis
+  - Python
+  - Matplotlib
+  - Plotly
+  - Streamlit
+  - Datashader
+  - geospatial visualisation
+  - accessible charts
+references:
+  - type: article
+    title: "What are the important principles of data visualization?"
+    authors:
+      - family-names: Singla
+        given-names: Saurav
+    date-published: 2020-10-19
+    url: "https://medium.com/data-science/what-are-the-important-principles-of-data-visualization-3d3ca6c8c303"
+  - type: article
+    title: "Exploratory Data Analysis is a significant part of Data Science"
+    authors:
+      - family-names: Singla
+        given-names: Saurav
+    date-published: 2020-08-05
+    url: "https://medium.com/data-science/exploratory-data-analysis-is-a-significant-part-of-data-science-7f3b173c04d2"
