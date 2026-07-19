@@ -6,6 +6,8 @@ This repository is the practical companion to two public articles by **Saurav Si
 
 The notebook [`notebooks/iris_eda_visualisation_articles.ipynb`](notebooks/iris_eda_visualisation_articles.ipynb) combines the ideas from both articles using Fisher's public **UCI Iris dataset**, loaded through scikit-learn without a fragile network download.
 
+For query-based navigation, use the [`searchable notebook and EDA index`](docs/NOTEBOOK_INDEX.md). It maps common searches such as *Iris EDA Python notebook*, *Plotly scatter example*, *correlation heatmap*, *small-multiple distribution plots*, and *external public dataset visualization* to the relevant notebook section or repository example.
+
 It demonstrates:
 
 - data-quality inspection before charting;
@@ -82,13 +84,27 @@ Generated PNG and HTML outputs are written to `artifacts/`.
 ## Recommended learning path
 
 1. Read the data-visualisation principles article.
-2. Open and run `notebooks/iris_eda_visualisation_articles.ipynb`.
-3. Read the EDA article and revisit the notebook's data-quality and hypothesis sections.
-4. Run `python examples/gallery.py`.
-5. Open `Data_Visualisation_Charts.ipynb` for the original chart collection.
-6. Run `streamlit run apps/streamlit_app.py`.
-7. Try the geospatial and million-point examples.
-8. Adapt the reusable APIs to a governed dataset of your own.
+2. Open the [searchable notebook and EDA index](docs/NOTEBOOK_INDEX.md).
+3. Run `notebooks/iris_eda_visualisation_articles.ipynb`.
+4. Read the EDA article and revisit the notebook's data-quality and hypothesis sections.
+5. Run `python examples/gallery.py`.
+6. Open `Data_Visualisation_Charts.ipynb` for the original chart collection.
+7. Run `streamlit run apps/streamlit_app.py`.
+8. Try the geospatial and million-point examples.
+9. Adapt the reusable APIs to a governed dataset of your own.
+
+## Search topics covered
+
+- Python exploratory data analysis notebook;
+- UCI Iris dataset visualization;
+- Matplotlib and Seaborn Iris examples;
+- Plotly interactive scatter plot;
+- annotated correlation heatmap;
+- grouped distribution and density plots;
+- small-multiple visualizations;
+- accessible data visualization principles;
+- visual storytelling with EDA;
+- external public dataset analysis.
 
 ## Dataset provenance
 
