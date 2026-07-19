@@ -4,6 +4,7 @@ Use these guides to navigate the repository by analytical problem, dataset, char
 
 ## Start here
 
+- [Iris Dataset EDA in Python](iris-eda-python-notebook.md) — searchable landing page for the UCI Iris Jupyter notebook, including Matplotlib, Seaborn, Plotly, correlation heatmap, scatter plot, distributions, small multiples, and visual storytelling.
 - [Searchable notebook and example index](NOTEBOOK_INDEX.md) — maps common searches such as Iris EDA Python notebook, correlation heatmap example, Plotly scatter plot, Seaborn distributions, Streamlit dashboard, choropleth map, and Datashader visualization to runnable examples.
 - [Applied UCI Iris EDA notebook](../notebooks/iris_eda_visualisation_articles.ipynb) — complete external-dataset demonstration covering data quality, descriptive statistics, distributions, relationships, correlations, accessible chart design, and visual storytelling.
 - [Python Data Visualization Guide](python-data-visualization-guide.md) — chart selection, Matplotlib, Plotly, Streamlit, geospatial visualization, Datashader, accessibility, and reproducibility.
@@ -13,12 +14,12 @@ Use these guides to navigate the repository by analytical problem, dataset, char
 
 | Search or analytical question | Recommended resource |
 |---|---|
-| Iris dataset EDA in Python | [Applied UCI Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
-| Exploratory data analysis Jupyter notebook | [Applied UCI Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
+| Iris dataset EDA in Python | [Searchable Iris EDA guide](iris-eda-python-notebook.md) and [runnable notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
+| Exploratory data analysis Jupyter notebook | [Searchable Iris EDA guide](iris-eda-python-notebook.md) and [runnable notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
 | Matplotlib and Seaborn visualization examples | [Static chart gallery](../examples/gallery.py) and [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
-| Plotly interactive scatter plot | [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
-| Annotated correlation heatmap | [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) and [gallery](../examples/gallery.py) |
-| Distribution plots and small multiples | [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
+| Plotly interactive scatter plot | [Iris EDA guide](iris-eda-python-notebook.md) and [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
+| Annotated correlation heatmap | [Iris EDA guide](iris-eda-python-notebook.md), [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb), and [gallery](../examples/gallery.py) |
+| Distribution plots and small multiples | [Iris EDA guide](iris-eda-python-notebook.md) and [Iris notebook](../notebooks/iris_eda_visualisation_articles.ipynb) |
 | Streamlit data visualization dashboard | [Streamlit application](../apps/streamlit_app.py) |
 | Python choropleth map | [Geospatial example](../examples/geospatial.py) |
 | Million-point visualization | [Datashader example](../examples/large_data.py) |
@@ -42,9 +43,12 @@ The reusable API is under [`src/dataviz_reference`](../src/dataviz_reference). I
 - Python data visualization examples
 - Iris dataset exploratory data analysis
 - UCI Iris visualization notebook
-- Matplotlib and Seaborn chart examples
+- Iris EDA Python Jupyter notebook
+- Matplotlib Iris dataset example
+- Seaborn Iris distribution plot
 - Plotly interactive scatter plot
 - correlation heatmap in Python
+- petal length and petal width scatter plot
 - distribution plots and small multiples
 - Streamlit dashboard example
 - accessible data visualization
