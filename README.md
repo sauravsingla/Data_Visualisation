@@ -15,15 +15,40 @@ Use this project when searching for practical **Python data visualization exampl
 
 The preview is generated from the same deterministic sample design used by [`examples/gallery.py`](examples/gallery.py). Run the gallery locally to regenerate the individual high-resolution outputs in `artifacts/`.
 
+## Applied notebook using a public external dataset
+
+[`notebooks/iris_eda_visualisation_articles.ipynb`](notebooks/iris_eda_visualisation_articles.ipynb) converts the repository's two published articles into a complete executable demonstration using Fisher's public **UCI Iris dataset**.
+
+The notebook loads the dataset through scikit-learn without a fragile live download and demonstrates:
+
+- data-quality inspection, missing values, duplicates, and descriptive statistics;
+- chart selection based on the analytical question;
+- sorted and directly labelled category comparisons;
+- grouped feature distributions using small multiples;
+- static and interactive relationship analysis;
+- an annotated correlation heatmap;
+- honest scales, units, reduced chart noise, and narrative titles;
+- movement from EDA findings to a concise visual conclusion.
+
+Run it with:
+
+```bash
+pip install -e ".[all,dev]"
+jupyter lab notebooks/iris_eda_visualisation_articles.ipynb
+```
+
+The notebook writes reproducible PNG and interactive HTML outputs to `artifacts/`. See [`ARTICLES.md`](ARTICLES.md) for the detailed article-to-notebook mapping and dataset provenance.
+
 ## Explore by analytical problem
 
 | Analytical question | Recommended approach | Repository example |
 |---|---|---|
 | How is a metric changing over time? | Matplotlib or Plotly time series | `time_series_chart`, `interactive_time_series` |
-| Which categories rank highest? | Sorted horizontal bar chart | `examples/gallery.py` |
-| How are variables related? | Scatter plot with optional grouping | `apps/streamlit_app.py` |
-| What does the distribution look like? | Histogram or density comparison | `examples/gallery.py` |
-| Which variables move together? | Annotated correlation heatmap | `examples/gallery.py` |
+| Which categories rank highest? | Sorted horizontal bar chart | `examples/gallery.py` and the Iris notebook |
+| How are variables related? | Scatter plot with optional grouping | Iris notebook and `apps/streamlit_app.py` |
+| What does the distribution look like? | Histogram, density comparison, or small multiples | Iris notebook and `examples/gallery.py` |
+| Which variables move together? | Annotated correlation heatmap | Iris notebook and `examples/gallery.py` |
+| Which charts best explain one real dataset? | Question-led EDA narrative | `notebooks/iris_eda_visualisation_articles.ipynb` |
 | How do countries compare? | Interactive choropleth map | `examples/geospatial.py` |
 | How can one million points be rendered clearly? | Datashader aggregation | `examples/large_data.py` |
 | How can analysis be shared with users? | Streamlit dashboard or standalone HTML | `apps/streamlit_app.py` |
@@ -33,6 +58,7 @@ The preview is generated from the same deterministic sample design used by [`exa
 
 - Reusable static chart APIs built with Matplotlib and Seaborn
 - Interactive Plotly charts with filtering, hover, zoom, and responsive layouts
+- An applied UCI Iris dataset notebook connecting published visualization and EDA principles to code
 - Streamlit analytical dashboard patterns
 - Country-level geospatial choropleth visualization
 - Million-point visualization with Datashader
@@ -116,9 +142,10 @@ The geospatial example produces a standalone HTML choropleth. The large-data exa
 |---|---|---|
 | Trends | Matplotlib lines | Validated Plotly time series with unified hover |
 | Ranking | Vertical bars | Sorted horizontal bars with direct labels |
-| Distribution | Histograms | Grouped density comparison |
+| Distribution | Histograms | Grouped density comparison and small multiples |
 | Relationships | Scatter plots | Multivariate interactive scatter |
 | Correlation | Manual matrices | Annotated correlation heatmap |
+| Applied EDA | Isolated charts | Question-led Iris dataset notebook with a narrative conclusion |
 | Geography | Static maps | Browser-based choropleth |
 | Large data | Overplotted points | Datashader aggregation for one million rows |
 | Delivery | Notebook output | Streamlit dashboard and standalone HTML |
@@ -141,6 +168,8 @@ The geospatial example produces a standalone HTML choropleth. The large-data exa
 ```text
 .
 ├── Data_Visualisation_Charts.ipynb   # Original traditional-chart notebook
+├── notebooks/
+│   └── iris_eda_visualisation_articles.ipynb # Applied UCI Iris EDA article demo
 ├── ARTICLES.md                       # Published articles and code mapping
 ├── CITATION.cff                      # Machine-readable citation metadata
 ├── apps/streamlit_app.py             # Interactive analytical dashboard
@@ -165,6 +194,8 @@ This repository complements public articles and presentation material by **Saura
 1. [What are the important principles of data visualization?](https://medium.com/data-science/what-are-the-important-principles-of-data-visualization-3d3ca6c8c303) — visual encoding, refinement, clarity, and narrative visualisation.
 2. [Exploratory Data Analysis is a significant part of Data Science](https://medium.com/data-science/exploratory-data-analysis-is-a-significant-part-of-data-science-7f3b173c04d2) — practical EDA, understanding distributions, relationships, patterns, and data quality before modelling.
 
+The applied [UCI Iris notebook](notebooks/iris_eda_visualisation_articles.ipynb) demonstrates both articles together on one real public dataset.
+
 ### Presentation
 
 - [Data visualization — Road Accidents in United Kingdom](https://share.google/stvTDaRe4NFjtxVFs) — an applied data-visualisation study using UK road-accident data to identify trends and relationships across accident, road, vehicle, driver, time, and severity attributes.
@@ -185,7 +216,7 @@ Coverage is configured with branch measurement and an 85% minimum. GitHub Action
 
 ## Open-source data policy
 
-Examples use deterministic synthetic data by default, avoiding unstable downloads and licensing surprises. The APIs accept ordinary pandas DataFrames, so users can apply them to open datasets from World Bank Open Data, Our World in Data, data.gov.in, Kaggle, UCI Machine Learning Repository, or governed internal data sources. Always retain the original dataset licence and citation.
+Examples use deterministic synthetic data by default, avoiding unstable downloads and licensing surprises. The applied article notebook uses Fisher's public Iris dataset, distributed through scikit-learn and originally published through the UCI Machine Learning Repository. The APIs also accept ordinary pandas DataFrames, so users can apply them to open datasets from World Bank Open Data, Our World in Data, data.gov.in, Kaggle, UCI Machine Learning Repository, or governed internal data sources. Always retain the original dataset licence and citation.
 
 ## Search terms and use cases
 
@@ -196,6 +227,8 @@ This project is relevant to:
 - Plotly interactive chart examples
 - Streamlit dashboard examples
 - exploratory data analysis visualizations
+- UCI Iris dataset EDA notebook
+- external dataset visualization in Python
 - statistical graphics in Python
 - geospatial data visualization and choropleth maps
 - large dataset visualization with Datashader
