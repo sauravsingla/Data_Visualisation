@@ -1,19 +1,33 @@
-# Python Data Visualization Guide
+# Python Data Visualization and EDA Guide
 
-This guide maps common analytical questions to practical Python data visualization choices using Matplotlib, Seaborn, Plotly, Streamlit, and Datashader.
+This guide maps common analytical questions to practical Python data visualization choices using Matplotlib, Seaborn, Plotly, Streamlit, and Datashader. For a complete public-dataset walkthrough, use the [UCI Iris exploratory data analysis notebook](../notebooks/iris_eda_visualisation_articles.ipynb).
 
 ## Choosing the right chart
 
-| Analytical task | Recommended chart | Typical Python tool |
-|---|---|---|
-| Show change over time | Line chart | Matplotlib or Plotly |
-| Compare categories | Sorted horizontal bar chart | Matplotlib, Seaborn, or Plotly |
-| Examine a distribution | Histogram, box plot, or density plot | Seaborn or Matplotlib |
-| Study relationships | Scatter plot | Matplotlib or Plotly |
-| Compare several numeric variables | Correlation heatmap | Seaborn |
-| Compare countries or regions | Choropleth map | Plotly |
-| Explore a dashboard interactively | Filtered charts and controls | Streamlit and Plotly |
-| Render very large point datasets | Aggregated density image | Datashader |
+| Analytical task | Recommended chart | Typical Python tool | Repository example |
+|---|---|---|---|
+| Show change over time | Line chart | Matplotlib or Plotly | `time_series_chart`, `interactive_time_series` |
+| Compare categories | Sorted horizontal bar chart | Matplotlib, Seaborn, or Plotly | Iris species-count chart and `examples/gallery.py` |
+| Examine a distribution | Histogram, box plot, density plot, or small multiples | Seaborn or Matplotlib | Iris feature-distribution section |
+| Study relationships | Scatter plot | Matplotlib or Plotly | Static and interactive Iris petal scatter plots |
+| Compare several numeric variables | Correlation heatmap | Seaborn | Annotated Iris correlation heatmap |
+| Compare countries or regions | Choropleth map | Plotly | `examples/geospatial.py` |
+| Explore a dashboard interactively | Filtered charts and controls | Streamlit and Plotly | `apps/streamlit_app.py` |
+| Render very large point datasets | Aggregated density image | Datashader | `examples/large_data.py` |
+
+## Applied UCI Iris EDA notebook
+
+The notebook [`notebooks/iris_eda_visualisation_articles.ipynb`](../notebooks/iris_eda_visualisation_articles.ipynb) is the repository's end-to-end example for searches such as:
+
+- Iris dataset EDA in Python;
+- UCI Iris visualization Jupyter notebook;
+- exploratory data analysis with Matplotlib and Seaborn;
+- Plotly interactive scatter plot example;
+- annotated correlation heatmap in Python;
+- distribution plots and small multiples;
+- visual storytelling with a public dataset.
+
+It validates data quality, compares species, studies distributions and relationships, creates static and interactive charts, and ends with a concise evidence-based narrative. See the [searchable notebook index](NOTEBOOK_INDEX.md) for a query-to-example map.
 
 ## Time-series visualization
 
@@ -44,13 +58,14 @@ Good practice:
 - avoid unnecessary legends;
 - limit the number of categories or group minor categories.
 
-Repository example:
+Repository examples:
 
+- Iris species-count section in `notebooks/iris_eda_visualisation_articles.ipynb`
 - `examples/gallery.py`
 
 ## Distribution analysis
 
-Histograms and density plots help reveal skew, spread, clusters, and outliers. Box plots are useful for comparing distributions across groups.
+Histograms and density plots help reveal skew, spread, clusters, and outliers. Box plots are useful for comparing distributions across groups. Small multiples are useful when several variables need the same visual grammar without overcrowding one chart.
 
 Good practice:
 
@@ -59,16 +74,23 @@ Good practice:
 - compare groups using consistent scales;
 - combine summary statistics with the chart when interpretation matters.
 
+Repository examples:
+
+- Iris grouped density and small-multiple section
+- `examples/gallery.py`
+
 ## Relationship and correlation analysis
 
-Scatter plots show relationships between two numeric variables. Add grouping, size, or interaction only when each additional encoding answers a real question.
+Scatter plots show relationships between two numeric variables. Add grouping, size, shape, or interaction only when each additional encoding answers a real question.
 
 Correlation heatmaps provide a compact overview, but correlation should not be presented as causation.
 
 Repository examples:
 
-- `apps/streamlit_app.py`
-- `examples/gallery.py`
+- static and interactive Iris petal scatter plots;
+- annotated Iris Pearson correlation heatmap;
+- `apps/streamlit_app.py`;
+- `examples/gallery.py`.
 
 ## Interactive Plotly charts
 
@@ -76,9 +98,10 @@ Interactive charts are useful when users need tooltips, zooming, filtering, or s
 
 Repository examples:
 
-- `interactive_time_series`
-- `examples/geospatial.py`
-- `apps/streamlit_app.py`
+- interactive Iris scatter plot;
+- `interactive_time_series`;
+- `examples/geospatial.py`;
+- `apps/streamlit_app.py`.
 
 ## Streamlit dashboards
 
@@ -121,20 +144,26 @@ Repository example:
 ## Reproducibility checklist
 
 - Pin or constrain dependencies.
-- Use deterministic sample data.
-- Validate required columns and types.
+- Use deterministic or versioned public data.
+- Validate required columns, types, missing values, and category labels.
 - Return figure objects from reusable functions.
 - Test chart-building logic.
-- Run examples in CI.
-- Record benchmark conditions.
+- Execute notebooks and examples in CI.
+- Record dataset provenance and benchmark conditions.
 
 ## Related search topics
 
 - Python data visualization examples
-- Matplotlib chart examples
-- Plotly interactive charts
+- Python exploratory data analysis notebook
+- Iris dataset EDA Python
+- UCI Iris Jupyter notebook
+- Matplotlib Iris dataset visualization
+- Seaborn distribution plots
+- Plotly interactive scatter plot
+- annotated correlation heatmap Python
+- small multiples visualization
 - Streamlit dashboard tutorial
-- Seaborn exploratory data analysis
 - accessible data visualization
+- visual storytelling with data
 - geospatial visualization Python
 - Datashader large dataset visualization
