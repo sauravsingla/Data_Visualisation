@@ -24,8 +24,17 @@ keywords = [
   "exploratory-data-analysis",
   "eda",
   "iris-dataset",
+  "iris-eda",
+  "uci-iris",
   "uci-dataset",
   "jupyter-notebook",
+  "eda-notebook",
+  "external-dataset",
+  "correlation-heatmap",
+  "scatter-plot",
+  "distribution-plot",
+  "small-multiples",
+  "visual-storytelling",
   "geospatial-visualization",
   "choropleth",
   "large-data-visualization",
@@ -90,6 +99,7 @@ Documentation = "https://github.com/sauravsingla/Data_Visualisation#readme"
 Gallery = "https://github.com/sauravsingla/Data_Visualisation/tree/master/examples"
 Articles = "https://github.com/sauravsingla/Data_Visualisation/blob/master/ARTICLES.md"
 Notebook = "https://github.com/sauravsingla/Data_Visualisation/blob/master/notebooks/iris_eda_visualisation_articles.ipynb"
+NotebookIndex = "https://github.com/sauravsingla/Data_Visualisation/blob/master/docs/NOTEBOOK_INDEX.md"
 Issues = "https://github.com/sauravsingla/Data_Visualisation/issues"
 
 [tool.hatch.build.targets.wheel]
