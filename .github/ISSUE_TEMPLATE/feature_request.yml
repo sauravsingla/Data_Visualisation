@@ -1,0 +1,60 @@
+name: Feature request
+description: Propose a reusable chart, dashboard capability, accessibility improvement, or documentation enhancement
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Analytical problem
+      description: What question or workflow is difficult with the current project?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the API, chart, example, dashboard behaviour, or documentation change.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Static visualization API
+        - Interactive Plotly API
+        - Streamlit dashboard
+        - Geospatial visualization
+        - Large-data rendering
+        - Accessibility
+        - Performance or benchmarking
+        - Documentation or examples
+        - Packaging or developer experience
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example use case
+      description: Show a small synthetic-data example or desired usage.
+      render: python
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: checkboxes
+    id: principles
+    attributes:
+      label: Project fit
+      options:
+        - label: The request has a clear analytical purpose rather than adding a chart for decoration.
+          required: true
+        - label: The proposed example can use synthetic or openly licensed data.
+          required: true
