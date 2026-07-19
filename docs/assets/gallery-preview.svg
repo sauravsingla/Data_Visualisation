@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">Python data visualisation gallery</title>
+<desc id="desc">Four deterministic examples generated from the repository gallery: time series, ranked bars, distributions and a correlation heatmap.</desc>
+<style>
+  .panel{fill:#fff;stroke:#d0d7de;stroke-width:1.5}.title{font:700 22px system-ui,sans-serif;fill:#24292f}.subtitle{font:14px system-ui,sans-serif;fill:#57606a}.axis{stroke:#8c959f;stroke-width:1}.grid{stroke:#d8dee4;stroke-width:1;opacity:.65}.label{font:13px system-ui,sans-serif;fill:#57606a}.small{font:11px system-ui,sans-serif;fill:#57606a}.blue{stroke:#0072B2;fill:none;stroke-width:4}.orange{stroke:#E69F00;fill:none;stroke-width:4}.bar{fill:#0072B2}.pink{fill:#CC79A7;opacity:.35}.green{fill:#009E73;opacity:.35}.dot1{fill:#0072B2}.dot2{fill:#E69F00}
+</style>
+<rect width="1200" height="760" fill="#f6f8fa"/>
+<text x="50" y="45" class="title">Data Visualisation Reference — generated gallery</text>
+<text x="50" y="70" class="subtitle">Deterministic examples from examples/gallery.py using the repository's accessible theme.</text>
+
+<!-- Time series -->
+<g transform="translate(40 100)">
+ <rect class="panel" width="545" height="285" rx="12"/>
+ <text x="24" y="34" class="title">Monthly trend</text>
+ <line x1="60" y1="230" x2="510" y2="230" class="axis"/><line x1="60" y1="60" x2="60" y2="230" class="axis"/>
+ <line x1="60" y1="180" x2="510" y2="180" class="grid"/><line x1="60" y1="130" x2="510" y2="130" class="grid"/><line x1="60" y1="80" x2="510" y2="80" class="grid"/>
+ <polyline points="65,205 102,192 139,178 176,162 213,149 250,138 287,122 324,109 361,96 398,84 435,68 492,54" class="blue"/>
+ <polyline points="65,215 102,207 139,194 176,188 213,176 250,169 287,158 324,151 361,140 398,133 435,120 492,111" class="orange"/>
+ <g class="dot1"><circle cx="65" cy="205" r="4"/><circle cx="176" cy="162" r="4"/><circle cx="287" cy="122" r="4"/><circle cx="398" cy="84" r="4"/><circle cx="492" cy="54" r="4"/></g>
+ <g class="dot2"><circle cx="65" cy="215" r="4"/><circle cx="176" cy="188" r="4"/><circle cx="287" cy="158" r="4"/><circle cx="398" cy="133" r="4"/><circle cx="492" cy="111" r="4"/></g>
+ <text x="360" y="260" class="small">Traditional</text><line x1="330" y1="255" x2="352" y2="255" class="blue"/><text x="455" y="260" class="small">Modern</text><line x1="425" y1="255" x2="447" y2="255" class="orange"/>
+</g>
+
+<!-- Ranked bars -->
+<g transform="translate(615 100)">
+ <rect class="panel" width="545" height="285" rx="12"/>
+ <text x="24" y="34" class="title">Value by category</text>
+ <g class="small">
+  <text x="24" y="75">Category 8</text><rect x="110" y="61" width="350" height="18" class="bar"/><text x="470" y="75">96.2</text>
+  <text x="24" y="102">Category 3</text><rect x="110" y="88" width="320" height="18" class="bar"/><text x="440" y="102">88.0</text>
+  <text x="24" y="129">Category 11</text><rect x="110" y="115" width="292" height="18" class="bar"/><text x="412" y="129">80.4</text>
+  <text x="24" y="156">Category 5</text><rect x="110" y="142" width="258" height="18" class="bar"/><text x="378" y="156">71.0</text>
+  <text x="24" y="183">Category 1</text><rect x="110" y="169" width="225" height="18" class="bar"/><text x="345" y="183">62.1</text>
+  <text x="24" y="210">Category 9</text><rect x="110" y="196" width="195" height="18" class="bar"/><text x="315" y="210">54.0</text>
+  <text x="24" y="237">Category 6</text><rect x="110" y="223" width="165" height="18" class="bar"/><text x="285" y="237">45.3</text>
+  <text x="24" y="264">Category 2</text><rect x="110" y="250" width="135" height="18" class="bar"/><text x="255" y="264">37.1</text>
+ </g>
+</g>
+
+<!-- Distribution -->
+<g transform="translate(40 415)">
+ <rect class="panel" width="545" height="300" rx="12"/>
+ <text x="24" y="34" class="title">Distribution of score</text>
+ <line x1="60" y1="245" x2="510" y2="245" class="axis"/><line x1="60" y1="65" x2="60" y2="245" class="axis"/>
+ <path d="M70 245 C120 243,135 210,165 175 C195 135,225 95,270 115 C310 132,325 195,365 220 C410 245,455 245,500 245 L500 245 Z" class="green"/>
+ <path d="M70 245 C145 244,175 226,215 198 C255 165,290 105,335 92 C380 80,420 124,448 176 C470 215,485 238,500 245 L500 245 Z" class="pink"/>
+ <path d="M70 245 C120 243,135 210,165 175 C195 135,225 95,270 115 C310 132,325 195,365 220 C410 245,455 245,500 245" stroke="#009E73" fill="none" stroke-width="3"/>
+ <path d="M70 245 C145 244,175 226,215 198 C255 165,290 105,335 92 C380 80,420 124,448 176 C470 215,485 238,500 245" stroke="#CC79A7" fill="none" stroke-width="3"/>
+ <text x="390" y="275" class="small">Group A</text><rect x="365" y="264" width="16" height="12" fill="#009E73" opacity=".5"/><text x="470" y="275" class="small">Group B</text><rect x="445" y="264" width="16" height="12" fill="#CC79A7" opacity=".5"/>
+</g>
+
+<!-- Correlation -->
+<g transform="translate(615 415)">
+ <rect class="panel" width="545" height="300" rx="12"/>
+ <text x="24" y="34" class="title">Correlation heatmap</text>
+ <g transform="translate(125 60)">
+  <rect x="0" y="0" width="48" height="48" fill="#b2182b"/><rect x="0" y="48" width="48" height="48" fill="#f7f7f7"/><rect x="48" y="48" width="48" height="48" fill="#b2182b"/>
+  <rect x="0" y="96" width="48" height="48" fill="#d9eaf3"/><rect x="48" y="96" width="48" height="48" fill="#f1f1f1"/><rect x="96" y="96" width="48" height="48" fill="#b2182b"/>
+  <rect x="0" y="144" width="48" height="48" fill="#f3e5e7"/><rect x="48" y="144" width="48" height="48" fill="#e8f1f5"/><rect x="96" y="144" width="48" height="48" fill="#f4ecee"/><rect x="144" y="144" width="48" height="48" fill="#b2182b"/>
+  <rect x="0" y="192" width="48" height="48" fill="#d6604d"/><rect x="48" y="192" width="48" height="48" fill="#f4f4f4"/><rect x="96" y="192" width="48" height="48" fill="#e7f0f4"/><rect x="144" y="192" width="48" height="48" fill="#f6eeee"/><rect x="192" y="192" width="48" height="48" fill="#b2182b"/>
+  <g class="small" text-anchor="middle" dominant-baseline="middle" fill="#24292f">
+   <text x="24" y="24" fill="white">1.00</text><text x="24" y="72">0.02</text><text x="72" y="72" fill="white">1.00</text>
+   <text x="24" y="120">-0.08</text><text x="72" y="120">0.01</text><text x="120" y="120" fill="white">1.00</text>
+   <text x="24" y="168">0.04</text><text x="72" y="168">-0.05</text><text x="120" y="168">0.03</text><text x="168" y="168" fill="white">1.00</text>
+   <text x="24" y="216">0.91</text><text x="72" y="216">0.01</text><text x="120" y="216">-0.05</text><text x="168" y="216">0.03</text><text x="216" y="216" fill="white">1.00</text>
+  </g>
+  <g class="label" text-anchor="middle"><text x="24" y="258">A</text><text x="72" y="258">B</text><text x="120" y="258">C</text><text x="168" y="258">D</text><text x="216" y="258">E</text></g>
+ </g>
+</g>
+</svg>
