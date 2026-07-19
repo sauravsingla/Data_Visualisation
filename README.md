@@ -1,61 +1,44 @@
-# Data Visualisation Reference
+# Python Data Visualization Reference: Matplotlib, Plotly, Streamlit and Datashader
 
 [![CI](https://github.com/sauravsingla/Data_Visualisation/actions/workflows/ci.yml/badge.svg)](https://github.com/sauravsingla/Data_Visualisation/actions/workflows/ci.yml)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![CITATION.cff](https://img.shields.io/badge/citation-CFF-blue.svg)](CITATION.cff)
 
-A production-minded reference repository for clear, accessible, scalable, and reusable data visualisation in Python. It combines traditional statistical graphics with interactive dashboards, geospatial analysis, million-point rendering, benchmarking, testing, and CI.
+A production-minded Python data visualization repository with reusable Matplotlib and Plotly APIs, Streamlit dashboards, geospatial choropleths, accessible themes, exploratory data analysis examples, million-point Datashader rendering, benchmarks, tests, and CI.
 
-## Publications and presentations
+Use this project when searching for practical **Python data visualization examples**, **Matplotlib chart patterns**, **Plotly interactive visualizations**, **Streamlit dashboard examples**, **EDA visualizations**, **geospatial charts**, or **large-data visualization in Python**.
 
-This repository complements public articles and presentation material by **Saurav Singla**.
+## Explore by analytical problem
 
-### Published articles
+| Analytical question | Recommended approach | Repository example |
+|---|---|---|
+| How is a metric changing over time? | Matplotlib or Plotly time series | `time_series_chart`, `interactive_time_series` |
+| Which categories rank highest? | Sorted horizontal bar chart | `examples/gallery.py` |
+| How are variables related? | Scatter plot with optional grouping | `apps/streamlit_app.py` |
+| What does the distribution look like? | Histogram or density comparison | `examples/gallery.py` |
+| Which variables move together? | Annotated correlation heatmap | `examples/gallery.py` |
+| How do countries compare? | Interactive choropleth map | `examples/geospatial.py` |
+| How can one million points be rendered clearly? | Datashader aggregation | `examples/large_data.py` |
+| How can analysis be shared with users? | Streamlit dashboard or standalone HTML | `apps/streamlit_app.py` |
+| How can chart performance be measured? | Reproducible rendering benchmark | `benchmarks/benchmark_rendering.py` |
 
-1. [What are the important principles of data visualization?](https://medium.com/data-science/what-are-the-important-principles-of-data-visualization-3d3ca6c8c303) — visual encoding, refinement, clarity, and narrative visualisation.
-2. [Exploratory Data Analysis is a significant part of Data Science](https://medium.com/data-science/exploratory-data-analysis-is-a-significant-part-of-data-science-7f3b173c04d2) — practical EDA, understanding distributions, relationships, patterns, and data quality before modelling.
+## What this repository includes
 
-### SlideShare presentation
-
-- [**Data visualization — Road Accidents in United Kingdom**](https://share.google/stvTDaRe4NFjtxVFs) — an applied data-visualisation study using UK road-accident data to identify trends and relationships across accident, road, vehicle, driver, time, and severity attributes. The presentation demonstrates how exploratory analysis and statistical graphics can convert a complex real-world dataset into interpretable findings.
-
-The code in this repository turns these principles into reproducible Python examples, reusable APIs, automated tests, interactive dashboards, and scalable visualisation workflows. See [ARTICLES.md](ARTICLES.md) for the detailed article-to-code map.
-
-## What this repository solves
-
-- Time-series trends and multi-segment comparisons
-- Ranked categorical comparisons
-- Distribution and correlation analysis
-- Interactive exploration with Plotly
-- Shareable analytical dashboards with Streamlit
-- Country-level geospatial visualisation
-- Million-point rendering with Datashader
+- Reusable static chart APIs built with Matplotlib and Seaborn
+- Interactive Plotly charts with filtering, hover, zoom, and responsive layouts
+- Streamlit analytical dashboard patterns
+- Country-level geospatial choropleth visualization
+- Million-point visualization with Datashader
+- Exploratory data analysis and statistical graphics examples
+- Accessible themes, direct labels, honest scales, and readable chart defaults
 - Reproducible chart galleries and rendering benchmarks
-- Accessible themes, validation, testing, coverage, and CI
-
-## Repository structure
-
-```text
-.
-├── Data_Visualisation_Charts.ipynb   # Original traditional-chart notebook
-├── ARTICLES.md                       # Published articles and code mapping
-├── CITATION.cff                      # Machine-readable citation metadata
-├── apps/streamlit_app.py             # Interactive analytical dashboard
-├── benchmarks/benchmark_rendering.py # Matplotlib and Plotly benchmark
-├── examples/gallery.py               # Static reproducible gallery
-├── examples/geospatial.py            # Interactive choropleth example
-├── examples/large_data.py            # Million-point Datashader example
-├── src/dataviz_reference/            # Reusable static and interactive API
-├── tests/                             # Unit and validation tests
-├── .github/workflows/ci.yml          # Lint, tests, coverage, gallery execution
-├── CONTRIBUTING.md                   # Contribution quality standards
-└── pyproject.toml                    # Packaging and dependency groups
-```
+- Input validation, automated tests, branch coverage, linting, and GitHub Actions CI
 
 ## Quick start
 
 ```bash
+
 git clone https://github.com/sauravsingla/Data_Visualisation.git
 cd Data_Visualisation
 python -m venv .venv
@@ -90,7 +73,7 @@ figure, axis = time_series_chart(
 figure.savefig("artifacts/monthly_transactions.png", bbox_inches="tight")
 ```
 
-## Interactive API
+## Interactive Plotly API
 
 ```python
 from dataviz_reference import interactive_time_series
@@ -104,7 +87,7 @@ figure = interactive_time_series(
 figure.write_html("artifacts/monthly_transactions.html")
 ```
 
-## Run the dashboard
+## Run the Streamlit dashboard
 
 ```bash
 streamlit run apps/streamlit_app.py
@@ -112,7 +95,7 @@ streamlit run apps/streamlit_app.py
 
 The dashboard demonstrates filtering, segmented time series, multivariate scatter plots, tooltips, zooming, and responsive layout.
 
-## Specialised examples
+## Run specialised examples
 
 ```bash
 python examples/geospatial.py
@@ -148,6 +131,41 @@ The geospatial example produces a standalone HTML choropleth. The large-data exa
 7. Aggregate large datasets instead of drawing every mark blindly.
 8. Separate reusable plotting logic from notebooks and applications.
 
+## Repository structure
+
+```text
+.
+├── Data_Visualisation_Charts.ipynb   # Original traditional-chart notebook
+├── ARTICLES.md                       # Published articles and code mapping
+├── CITATION.cff                      # Machine-readable citation metadata
+├── apps/streamlit_app.py             # Interactive analytical dashboard
+├── benchmarks/benchmark_rendering.py # Matplotlib and Plotly benchmark
+├── docs/                             # Searchable guides and chart catalogue
+├── examples/gallery.py               # Static reproducible gallery
+├── examples/geospatial.py            # Interactive choropleth example
+├── examples/large_data.py            # Million-point Datashader example
+├── src/dataviz_reference/            # Reusable static and interactive API
+├── tests/                             # Unit and validation tests
+├── .github/workflows/ci.yml          # Lint, tests, coverage, gallery execution
+├── CONTRIBUTING.md                   # Contribution quality standards
+└── pyproject.toml                    # Packaging and dependency groups
+```
+
+## Publications and presentations
+
+This repository complements public articles and presentation material by **Saurav Singla**.
+
+### Published articles
+
+1. [What are the important principles of data visualization?](https://medium.com/data-science/what-are-the-important-principles-of-data-visualization-3d3ca6c8c303) — visual encoding, refinement, clarity, and narrative visualisation.
+2. [Exploratory Data Analysis is a significant part of Data Science](https://medium.com/data-science/exploratory-data-analysis-is-a-significant-part-of-data-science-7f3b173c04d2) — practical EDA, understanding distributions, relationships, patterns, and data quality before modelling.
+
+### Presentation
+
+- [Data visualization — Road Accidents in United Kingdom](https://share.google/stvTDaRe4NFjtxVFs) — an applied data-visualisation study using UK road-accident data to identify trends and relationships across accident, road, vehicle, driver, time, and severity attributes.
+
+See [ARTICLES.md](ARTICLES.md) for the detailed article-to-code map.
+
 ## Quality checks
 
 ```bash
@@ -162,7 +180,22 @@ Coverage is configured with branch measurement and an 85% minimum. GitHub Action
 
 ## Open-source data policy
 
-Examples use deterministic synthetic data by default, avoiding unstable downloads and licensing surprises. The APIs accept ordinary pandas DataFrames, so users can directly apply them to open datasets from World Bank Open Data, Our World in Data, data.gov.in, Kaggle, UCI Machine Learning Repository, or their own governed data sources. Always retain the original dataset licence and citation.
+Examples use deterministic synthetic data by default, avoiding unstable downloads and licensing surprises. The APIs accept ordinary pandas DataFrames, so users can apply them to open datasets from World Bank Open Data, Our World in Data, data.gov.in, Kaggle, UCI Machine Learning Repository, or governed internal data sources. Always retain the original dataset licence and citation.
+
+## Search terms and use cases
+
+This project is relevant to:
+
+- Python data visualization examples
+- Matplotlib and Seaborn chart examples
+- Plotly interactive chart examples
+- Streamlit dashboard examples
+- exploratory data analysis visualizations
+- statistical graphics in Python
+- geospatial data visualization and choropleth maps
+- large dataset visualization with Datashader
+- accessible data visualization
+- reusable chart APIs for analytics and data science
 
 ## Citation
 
@@ -170,7 +203,7 @@ Use GitHub's **Cite this repository** control, powered by [`CITATION.cff`](CITAT
 
 ## Contributing
 
-See `CONTRIBUTING.md`. New reusable charts should include validation, tests, accessible presentation, deterministic examples, and a documented analytical purpose.
+See [CONTRIBUTING.md](CONTRIBUTING.md). New reusable charts should include validation, tests, accessible presentation, deterministic examples, and a documented analytical purpose.
 
 ## License
 
