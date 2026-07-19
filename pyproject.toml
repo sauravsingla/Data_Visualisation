@@ -23,6 +23,9 @@ keywords = [
   "interactive-visualization",
   "exploratory-data-analysis",
   "eda",
+  "iris-dataset",
+  "uci-dataset",
+  "jupyter-notebook",
   "geospatial-visualization",
   "choropleth",
   "large-data-visualization",
@@ -58,9 +61,12 @@ dependencies = [
 [project.optional-dependencies]
 dashboard = ["streamlit>=1.36"]
 large-data = ["datashader>=0.16", "pillow>=10.0"]
+notebook = ["jupyterlab>=4.2", "scikit-learn>=1.4"]
 all = [
   "datashader>=0.16",
+  "jupyterlab>=4.2",
   "pillow>=10.0",
+  "scikit-learn>=1.4",
   "streamlit>=1.36",
 ]
 dev = [
@@ -76,6 +82,7 @@ Repository = "https://github.com/sauravsingla/Data_Visualisation"
 Documentation = "https://github.com/sauravsingla/Data_Visualisation#readme"
 Gallery = "https://github.com/sauravsingla/Data_Visualisation/tree/master/examples"
 Articles = "https://github.com/sauravsingla/Data_Visualisation/blob/master/ARTICLES.md"
+Notebook = "https://github.com/sauravsingla/Data_Visualisation/blob/master/notebooks/iris_eda_visualisation_articles.ipynb"
 Issues = "https://github.com/sauravsingla/Data_Visualisation/issues"
 
 [tool.hatch.build.targets.wheel]
