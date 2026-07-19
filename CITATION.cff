@@ -1,6 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the software and the relevant accompanying article."
-title: "Data Visualisation Reference"
+message: "If you use this repository, please cite the software, the applied UCI Iris EDA notebook, and the relevant accompanying article."
+title: "Python Data Visualization and Exploratory Data Analysis Reference"
 type: software
 authors:
   - family-names: Singla
@@ -11,17 +11,32 @@ version: 1.0.0
 date-released: 2026-07-19
 license: MIT
 keywords:
-  - data visualisation
-  - data visualization
+  - Python data visualization
   - exploratory data analysis
-  - Python
+  - EDA notebook
+  - UCI Iris dataset
+  - Iris dataset visualization
+  - Jupyter notebook
   - Matplotlib
+  - Seaborn
   - Plotly
-  - Streamlit
+  - interactive scatter plot
+  - correlation heatmap
+  - distribution analysis
+  - small multiples
+  - Streamlit dashboard
   - Datashader
-  - geospatial visualisation
-  - accessible charts
+  - geospatial visualization
+  - accessible data visualization
+  - visual storytelling
 references:
+  - type: software
+    title: "Applied Data Visualization and EDA with the UCI Iris Dataset"
+    authors:
+      - family-names: Singla
+        given-names: Saurav
+    repository-code: "https://github.com/sauravsingla/Data_Visualisation"
+    url: "https://github.com/sauravsingla/Data_Visualisation/blob/master/notebooks/iris_eda_visualisation_articles.ipynb"
   - type: article
     title: "What are the important principles of data visualization?"
     authors:
