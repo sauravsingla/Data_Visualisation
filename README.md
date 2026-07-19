@@ -9,6 +9,12 @@ A production-minded Python data visualization repository with reusable Matplotli
 
 Use this project when searching for practical **Python data visualization examples**, **Matplotlib chart patterns**, **Plotly interactive visualizations**, **Streamlit dashboard examples**, **EDA visualizations**, **geospatial charts**, or **large-data visualization in Python**.
 
+## Generated chart gallery
+
+![Generated Python data visualization gallery showing a time series, ranked bar chart, grouped distribution and correlation heatmap](docs/assets/gallery-preview.svg)
+
+The preview is generated from the same deterministic sample design used by [`examples/gallery.py`](examples/gallery.py). Run the gallery locally to regenerate the individual high-resolution outputs in `artifacts/`.
+
 ## Explore by analytical problem
 
 | Analytical question | Recommended approach | Repository example |
@@ -38,7 +44,6 @@ Use this project when searching for practical **Python data visualization exampl
 ## Quick start
 
 ```bash
-
 git clone https://github.com/sauravsingla/Data_Visualisation.git
 cd Data_Visualisation
 python -m venv .venv
@@ -64,13 +69,13 @@ data = pd.DataFrame(
         "transactions": [120, 148, 171],
     }
 )
-figure, axis = time_series_chart(
+axis = time_series_chart(
     data,
     date="date",
     value="transactions",
     title="Monthly transactions",
 )
-figure.savefig("artifacts/monthly_transactions.png", bbox_inches="tight")
+axis.figure.savefig("artifacts/monthly_transactions.png", bbox_inches="tight")
 ```
 
 ## Interactive Plotly API
@@ -140,7 +145,7 @@ The geospatial example produces a standalone HTML choropleth. The large-data exa
 ├── CITATION.cff                      # Machine-readable citation metadata
 ├── apps/streamlit_app.py             # Interactive analytical dashboard
 ├── benchmarks/benchmark_rendering.py # Matplotlib and Plotly benchmark
-├── docs/                             # Searchable guides and chart catalogue
+├── docs/                             # Searchable guides and generated preview assets
 ├── examples/gallery.py               # Static reproducible gallery
 ├── examples/geospatial.py            # Interactive choropleth example
 ├── examples/large_data.py            # Million-point Datashader example
