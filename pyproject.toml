@@ -5,11 +5,48 @@ build-backend = "hatchling.build"
 [project]
 name = "data-visualisation-reference"
 version = "1.0.0"
-description = "Practical, reusable data visualisation patterns for analytical and production workflows."
+description = "Production-ready Python data visualization examples, reusable Matplotlib and Plotly APIs, Streamlit dashboards, geospatial charts, accessible themes, and large-data rendering."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "Saurav Singla" }]
+keywords = [
+  "data-visualization",
+  "data-visualisation",
+  "python-data-visualization",
+  "matplotlib",
+  "plotly",
+  "streamlit",
+  "seaborn",
+  "datashader",
+  "dashboard",
+  "interactive-visualization",
+  "exploratory-data-analysis",
+  "eda",
+  "geospatial-visualization",
+  "choropleth",
+  "large-data-visualization",
+  "accessible-visualization",
+  "statistical-graphics",
+  "data-science",
+  "analytics",
+  "charting",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Education",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
   "matplotlib>=3.8",
   "numpy>=1.26",
@@ -32,6 +69,14 @@ dev = [
   "pytest-mpl>=0.17",
   "ruff>=0.5",
 ]
+
+[project.urls]
+Homepage = "https://github.com/sauravsingla/Data_Visualisation"
+Repository = "https://github.com/sauravsingla/Data_Visualisation"
+Documentation = "https://github.com/sauravsingla/Data_Visualisation#readme"
+Gallery = "https://github.com/sauravsingla/Data_Visualisation/tree/master/examples"
+Articles = "https://github.com/sauravsingla/Data_Visualisation/blob/master/ARTICLES.md"
+Issues = "https://github.com/sauravsingla/Data_Visualisation/issues"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/dataviz_reference"]
