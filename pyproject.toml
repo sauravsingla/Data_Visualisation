@@ -61,10 +61,17 @@ dependencies = [
 [project.optional-dependencies]
 dashboard = ["streamlit>=1.36"]
 large-data = ["datashader>=0.16", "pillow>=10.0"]
-notebook = ["jupyterlab>=4.2", "scikit-learn>=1.4"]
+notebook = [
+  "ipykernel>=6.29",
+  "jupyterlab>=4.2",
+  "nbconvert>=7.16",
+  "scikit-learn>=1.4",
+]
 all = [
   "datashader>=0.16",
+  "ipykernel>=6.29",
   "jupyterlab>=4.2",
+  "nbconvert>=7.16",
   "pillow>=10.0",
   "scikit-learn>=1.4",
   "streamlit>=1.36",
