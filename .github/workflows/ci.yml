@@ -8,10 +8,16 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   quality:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.10", "3.11", "3.12"]
     steps:
@@ -28,3 +34,43 @@ jobs:
         run: pytest --cov=dataviz_reference --cov-report=term-missing
       - name: Run gallery
         run: python examples/gallery.py
+
+  notebook:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install notebook dependencies
+        run: python -m pip install --upgrade pip && pip install -e ".[notebook]"
+      - name: Execute Iris article notebook
+        env:
+          MPLBACKEND: Agg
+        run: |
+          jupyter nbconvert \
+            --to notebook \
+            --execute notebooks/iris_eda_visualisation_articles.ipynb \
+            --output executed_iris_eda_visualisation_articles.ipynb \
+            --output-dir artifacts \
+            --ExecutePreprocessor.timeout=180
+      - name: Verify generated artifacts
+        run: |
+          test -f artifacts/iris_species_counts.png
+          test -f artifacts/iris_feature_distributions.png
+          test -f artifacts/iris_petal_relationship.png
+          test -f artifacts/iris_correlation_heatmap.png
+          test -f artifacts/iris_interactive_scatter.html
+          test -f artifacts/executed_iris_eda_visualisation_articles.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: iris-eda-notebook-demo
+          path: |
+            artifacts/iris_species_counts.png
+            artifacts/iris_feature_distributions.png
+            artifacts/iris_petal_relationship.png
+            artifacts/iris_correlation_heatmap.png
+            artifacts/iris_interactive_scatter.html
+            artifacts/executed_iris_eda_visualisation_articles.ipynb
